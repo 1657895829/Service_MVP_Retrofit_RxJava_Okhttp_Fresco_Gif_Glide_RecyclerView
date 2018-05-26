@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+                <com.facebook.drawee.view.SimpleDraweeView
+                    fresco:roundAsCircle="true"
+                    android:id="@+id/profileImage"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_centerVertical="true"
+                    fresco:placeholderImage="@drawable/app_default"
+                    fresco:placeholderImageScaleType="fitCenter"
+                    fresco:actualImageScaleType="fitCenter"
+                    fresco:failureImage="@drawable/load_error_image"
+                    fresco:failureImageScaleType="fitCenter" />
+
+                <TextView
+                    android:text="text"
+                    android:id="@+id/text"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    android:textColor="#0a0909"
+                    android:layout_marginLeft="18dp"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/profileImage"
+                    android:layout_gravity="center_vertical"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content" />
+        </RelativeLayout>
+
+        <cn.jzvd.JZVideoPlayerStandard
+            android:layout_margin="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="350dp"
+            android:id="@+id/videoPlayer"/>
+
+</LinearLayout>
